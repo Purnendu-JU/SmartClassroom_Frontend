@@ -27,7 +27,7 @@ export default function EditProfile() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('https://smart-classroom-backend.vercel.app/api/auth/editprofile', {
+    const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/editprofile', {
       method: 'PUT',
       headers:{
         'Content-Type': 'application/json',

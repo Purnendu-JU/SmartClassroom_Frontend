@@ -14,7 +14,7 @@ const TAttendance = () => {
 
   const fetchAttendanceRecords = async () => {
     try {
-      const res = await fetch('https://smart-classroom-backend.vercel.app/api/auth/getattendance', {
+      const res = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getattendance', {
         method: 'GET',
         headers: {
           'auth-token': localStorage.getItem('token'),
@@ -30,7 +30,7 @@ const TAttendance = () => {
 
   const handleGenerateCode = async () => {
     try {
-      const res = await fetch('https://smart-classroom-backend.vercel.app/api/auth/generateattendance', {
+      const res = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/generateattendance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const TAttendance = () => {
     }
 
     try {
-      const res = await fetch('https://smart-classroom-backend.vercel.app/api/auth/disablecode', {
+      const res = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/disablecode', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

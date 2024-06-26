@@ -14,7 +14,7 @@ const SAttendance = () => {
       if(attendanceCode.length !== 6){
         throw new Error('Enter correct code');
       }
-      const res = await fetch('https://smart-classroom-backend.vercel.app/api/auth/markattendance', {
+      const res = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/markattendance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

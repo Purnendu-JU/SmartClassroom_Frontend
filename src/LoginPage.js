@@ -19,7 +19,7 @@ export default function Login() {
     const formData = new FormData(event.target);
     const email = formData.get('email');
     const password = formData.get('password');
-    const response = await fetch('https://smart-classroom-backend.vercel.app/api/auth/login',{
+    const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/login',{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json'
