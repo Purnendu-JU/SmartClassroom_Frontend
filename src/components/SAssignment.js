@@ -12,7 +12,7 @@ const SAssignment = () => {
 
     const fetchAssignments = async () => {
         try {
-            const res = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getassignment', {
+            const res = await fetch('https://smart-classroom-backend.vercel.app/api/auth/getassignment', {
                 method: 'GET',
                 headers: {
                     'auth-token': localStorage.getItem('token'),
@@ -55,7 +55,7 @@ const SAssignment = () => {
                                         Question -
                                         <MuiLink
                                             component={Link}
-                                            to={`https://smart-classroom-web-app.onrender.com/files/${assignment.file}`}
+                                            to={`https://smart-classroom-backend.vercel.app/files/${assignment.file}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -66,7 +66,7 @@ const SAssignment = () => {
                                                 Solution -
                                                 <MuiLink
                                                     component={Link}
-                                                    to={`https://smart-classroom-web-app.onrender.com/files/${assignment.studentFile}`}
+                                                    to={`https://smart-classroom-backend.vercel.app/files/${assignment.studentFile}`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >

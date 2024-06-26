@@ -13,7 +13,7 @@ const Community = () => {
     // Fetch user information
     const fetchUser = async () => {
       try {
-        const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getuser', {
+        const response = await fetch('https://smart-classroom-backend.vercel.app/api/auth/getuser', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const Community = () => {
     // Fetch messages
     const fetchMessages = async () => {
       try {
-        const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getcommunity', {
+        const response = await fetch('https://smart-classroom-backend.vercel.app/api/auth/getcommunity', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const Community = () => {
   const handleSendMessage = async () => {
     if (user && message.trim() !== '') {
       try {
-        const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/postcommunity', {
+        const response = await fetch('https://smart-classroom-backend.vercel.app/api/auth/postcommunity', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ const TAssignment = () => {
 
     const fetchAssignments = async () => {
         try {
-            const res = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getassignment', {
+            const res = await fetch('https://smart-classroom-backend.vercel.app/api/auth/getassignment', {
                 method: 'GET',
                 headers: {
                     'auth-token': localStorage.getItem('token'),
@@ -38,7 +38,7 @@ const TAssignment = () => {
         formData.append('file', assignmentFile);
 
         try {
-            const res = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/postassignment', {
+            const res = await fetch('https://smart-classroom-backend.vercel.app/api/auth/postassignment', {
                 method: 'POST',
                 headers: {
                     'auth-token': localStorage.getItem('token'),
@@ -102,7 +102,7 @@ const TAssignment = () => {
                                 primary={`Title: ${assignment.title}`}
                                 secondary={
                                     assignment.file && (
-                                        <Link href={`https://smart-classroom-web-app.onrender.com/files/${assignment.file}`} target="_blank" rel="noopener noreferrer">
+                                        <Link href={`https://smart-classroom-backend.vercel.app/files/${assignment.file}`} target="_blank" rel="noopener noreferrer">
                                             {assignment.file}
                                         </Link>
                                     )
@@ -115,7 +115,7 @@ const TAssignment = () => {
                                             primary={`Student: ${student.name}`}
                                             secondary={
                                                 student.file && (
-                                                    <Link href={`https://smart-classroom-web-app.onrender.com/files/${student.file}`} target="_blank" rel="noopener noreferrer">
+                                                    <Link href={`https://smart-classroom-backend.vercel.app/files/${student.file}`} target="_blank" rel="noopener noreferrer">
                                                         {student.file}
                                                     </Link>
                                                 )
