@@ -17,7 +17,7 @@ const InsideClass = () => {
         const token = localStorage.getItem('token');
         const classToken = localStorage.getItem('classToken');
         if (token && classToken) {
-          const resRole = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getrole', {
+          const resRole = await fetch('https://smartclassroom.onrender.com/api/auth/getrole', {
             headers: {
               'auth-token': token,
               'auth': classToken
@@ -26,7 +26,7 @@ const InsideClass = () => {
           const roleData = await resRole.json();
           setRole(roleData.role);
 
-          const resClass = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getclass', {
+          const resClass = await fetch('https://smartclassroom.onrender.com/api/auth/getclass', {
             headers: {
               'auth': classToken
             },

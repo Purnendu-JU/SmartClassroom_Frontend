@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/landing', {
+        const response = await fetch('https://smartclassroom.onrender.com/api/auth/landing', {
           headers: {
             'auth-token': localStorage.getItem('token')
           }

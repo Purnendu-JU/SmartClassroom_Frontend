@@ -17,7 +17,7 @@ const CreateClass = () => {
         else if(subjectName.length < 5){
           throw new Error('Enter a proper subject name');
         }
-        const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/createclass', {
+        const response = await fetch('https://smartclassroom.onrender.com/api/auth/createclass', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

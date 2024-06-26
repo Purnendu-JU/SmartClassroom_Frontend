@@ -13,7 +13,7 @@ const AnnouncementSection = () => {
   useEffect(() => {
     const fetchAnnouncements = async () => {
       try {
-        const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/getannouncement', {
+        const response = await fetch('https://smartclassroom.onrender.com/api/auth/getannouncement', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const AnnouncementSection = () => {
       formData.append('content', announcementContent.trim());
       files.forEach(file => formData.append('files', file));
 
-      const response = await fetch('https://smart-classroom-web-app.onrender.com/api/auth/postannouncement', {
+      const response = await fetch('https://smartclassroom.onrender.com/api/auth/postannouncement', {
         method: 'POST',
         headers: {
           'auth-token': localStorage.getItem('token'),
@@ -151,7 +151,7 @@ const AnnouncementSection = () => {
           <Typography variant="subtitle2">Date: {formatDate(announcement.date)}</Typography>
           {announcement.files && announcement.files.map((file, fileIndex) => (
             <div key={fileIndex}>
-              <a href={`https://smart-classroom-web-app.onrender.com/files/${file}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://smartclassroom.onrender.com/files/${file}`} target="_blank" rel="noopener noreferrer">
                 {file}
               </a>
             </div>
